@@ -1,0 +1,63 @@
+---
+title: "How to calculate constants using the chartconstants package"
+author: "Michy Alice"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to calculate constants using the chartconstants package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The package provides a main function, a list of auxiliary functions and the constant functions which actually do the calculations or simply select the value to be returned.
+
+## The main function
+The main function, named *constant()*, is the only function exported and available to the final user for the calculation of the constants.
+
+The main function *constant()* takes two arguments in the following order:
+
+1. *n*: Numerosity of the sample. This argument should be an integer between 2 and 25 included. If n is outside the above mentioned range or is not an integer, the function call will result in an error. Note that *n* can also be an vector of integers.
+2. *cname*: Name of the constant to be used. This argument can be a character, even though non standard evaluation is implemented. For instance, d2, "d2" or 'd2' are all valid parameters. Available constants are the following c4, d2, d3, D3 and D4. In case no *cname* argument is specified, the function will stop the calculation and throw an error. Please note that the function is case sensitive, i.e. 'd3' is different than 'D3'
+
+Examples:
+
+The following are all valid examples of usage:
+```{r}
+library(chartconstants)
+constant(2, d2)
+constant(2, "d2")
+constant(2, 'd2')
+constant(2:10, c4)
+```
+
+As you can see all three work fine. Note however that no default constant is set: when *cname* is not specified, the function throws an error and stops the calculation
+
+```{r,error=TRUE}
+constant(2)
+```
+
+In case the *cname* parameter is not within the set of available constants, the function throws an error
+```{r,error=TRUE}
+constant(2, d222)
+```
+
+In case the *n* parameter is a vector of integers $(n_1, n_2, ...)$ the function returns the constants as a vector as follows $(D_3(n_1), D_3(n_2), ...)$, see the example below:
+```{r}
+constant(c(4:7, 10, 15), D3)
+```
+Note that even if only one number in the input vector *n* is not an integer or is outside the admissible range, the function will throw an error
+```{r,error=TRUE}
+constant(c(2, 5, 5.4), D3)
+constant(c(1:10, 200), D3)
+```
+
+## The constant functions
+Constant functions do the calculations or simply select the values of the constants "behind the curtains". They are the ones that actually do the heavy lifting on behalf of the main function. These functions are not exported and therefore are not directly available to the final user.
+
+## The auxiliary functions
+The following auxiliary function is included in the package:
+
+1. *available_constants()* prints out a string with all the available constants to be calculated. For instance:
+```{r}
+available_constants()
+```

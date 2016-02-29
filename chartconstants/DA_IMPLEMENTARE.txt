@@ -1,0 +1,2 @@
+COSTANTI A2,A3 ??
+SISTEMARE d2, d2 non va con i vettori. Tipo constant(2:10, d2) da errore.

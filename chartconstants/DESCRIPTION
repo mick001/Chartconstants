@@ -1,0 +1,16 @@
+Package: chartconstants
+Type: Package
+Title: Calculate Shewhart Control Charts constants
+Version: 0.1
+Date: 2016-01-30
+Authors@R: person("Michy", "Alice", email = "michy.alice@quantide.com", role = c("aut","cre"))
+Maintainer: Michy Alice <michy.alice@quantide.com>
+Description: This package provides a single function to quickly calculate the
+    most commmon constants used in order to build Shewhart control charts.
+License: GPL-3
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Suggests: knitr
