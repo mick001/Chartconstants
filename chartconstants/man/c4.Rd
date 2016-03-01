@@ -2,7 +2,7 @@
 % Please edit documentation in R/constant_functions.R
 \name{c4}
 \alias{c4}
-\title{Bias correction c4}
+\title{Bias correction c4 for estimating sigma}
 \usage{
 c4(n)
 }
@@ -13,6 +13,6 @@ c4(n)
 Numeric bias correction
 }
 \description{
-Bias correction c4
+Bias correction c4 for estimating sigma
 }
 

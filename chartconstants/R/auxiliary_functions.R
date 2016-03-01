@@ -41,5 +41,5 @@ check_n <- function(n){
 #'
 available_constants <- function()
 {
-    cat('Available constants:', c('c4','d2','d3','D3','D4'))
+    cat('Available constants:', c('A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4'))
 }

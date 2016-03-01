@@ -2,7 +2,7 @@
 % Please edit documentation in R/constant_functions.R
 \name{D4}
 \alias{D4}
-\title{Bias correction D4}
+\title{D4 constant}
 \usage{
 D4(n)
 }
@@ -10,9 +10,9 @@ D4(n)
 \item{n}{Number of samples in the current batch}
 }
 \value{
-Numeric bias correction
+Numeric constant
 }
 \description{
-Bias correction D4
+D4 constant
 }
 

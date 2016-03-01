@@ -4,12 +4,13 @@
 \alias{constant}
 \title{Constants for Shewhart quality control charts}
 \usage{
-constant(n, cname = c("", "c4", "d2", "d3", "D3", "D4"))
+constant(n, cname = c("", "A2", "A3", "B3", "B4", "B5", "B6", "c4", "d2",
+  "d3", "D1", "D2", "D3", "D4"))
 }
 \arguments{
 \item{n}{Numerosity of sample, must be an integer (numeric) within the [2,25] range.}
 
-\item{cname}{Name of the function to be used, can also be of character class. Admissible values are c4, d2, d3, D3 and D4.}
+\item{cname}{Name of the function to be used, can also be of character class. Admissible values are A2, A3, B3, B4, B5, B6, c4, d2, d3, D1, D2, D3 and D4.}
 }
 \value{
 Unbiasing constant (numeric).
@@ -20,7 +21,7 @@ Calculates different constants using a single function
 \examples{
 constant(2, D3)
 constant(2,'d2')
-constant(2:10, d2)
+constant(2:10, D4)
 
 }
 

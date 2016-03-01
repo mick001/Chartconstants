@@ -2,7 +2,7 @@
 % Please edit documentation in R/constant_functions.R
 \name{d3}
 \alias{d3}
-\title{Bias correction d3}
+\title{d3 constant}
 \usage{
 d3(n)
 }
@@ -10,9 +10,9 @@ d3(n)
 \item{n}{Number of samples in the current batch}
 }
 \value{
-Numeric bias correction
+Numeric
 }
 \description{
-Bias correction d3
+d3 is the standard deviation of the distribution of the relative range.
 }
 
