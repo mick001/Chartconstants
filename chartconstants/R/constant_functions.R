@@ -101,7 +101,7 @@ c4 <- function(n)
 #' @param n Number of samples in the current batch
 #' @return Numeric
 #'
-d2 <- function(n)
+d2_ <- function(n)
 {
     # Constant vector
     cv <- c(n)
