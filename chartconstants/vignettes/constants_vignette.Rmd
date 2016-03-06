@@ -17,7 +17,7 @@ The main function, named *constant()*, is the only function exported and availab
 The main function *constant()* takes two arguments in the following order:
 
 1. *n*: Numerosity of the sample. This argument should be an integer between 2 and 25 included. If n is outside the above mentioned range or is not an integer, the function call will result in an error. Note that *n* can also be an vector of integers.
-2. *cname*: Name of the constant to be used. This argument can be a character, even though non standard evaluation is implemented. For instance, d2, "d2" or 'd2' are all valid parameters. Available constants are the following: A2, A3, B3, B4, B5, B6, c4, d2, d3, D1, D2, D3 and D4. In case no *cname* argument is specified, the function will stop the calculation and throw an error. Please note that the function is case sensitive, i.e. 'd3' is different than 'D3'
+2. *cname*: Name of the constant to be used. This argument can be a character, even though non standard evaluation is implemented. For instance, d2, "d2" or 'd2' are all valid parameters. Available constants are the following: A2, A3, B3, B4, B5, B6, c4, d2, d3, D1, D2, D3, D4 and i_chart_const. In case no *cname* argument is specified, the function will stop the calculation and throw an error. Please note that the function is case sensitive, i.e. 'd3' is different than 'D3'
 
 Examples:
 

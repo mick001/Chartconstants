@@ -3,12 +3,25 @@
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
+# A xbar-r chart (mu and sigma given)
+################################################################################
+#' A constant
+#'
+#' @param n Number of samples in the current batch
+#' @return Numeric constant
+#'
+A <- function(n)
+{
+    return( 3 / sqrt(n) )
+}
+
+#-------------------------------------------------------------------------------
 # A2 xbar-r chart
 ################################################################################
 #' A2 constant
 #'
 #' @param n Number of samples in the current batch
-#' @return Numeric bias correction
+#' @return Numeric constant
 #'
 A2 <- function(n)
 {
@@ -199,4 +212,35 @@ D4 <- function(n)
                  1.672, 1.653, 1.637, 1.622, 1.608, 1.597,
                  1.585, 1.575, 1.566, 1.557, 1.548, 1.541)
     return(D4_cost[n])
+}
+
+
+#-------------------------------------------------------------------------------
+# One
+################################################################################
+#' One
+#'
+#' This function simply returns 1 or a vector of length n with all values set to 1.
+#'
+#' @param n Number of samples in the current batch
+#' @return Numeric constant
+#'
+one <- function(n)
+{
+    return( rep(1, length(n)) )
+}
+
+#-------------------------------------------------------------------------------
+# Numeric constant for LCL and UCL calculation in the I chart
+################################################################################
+#' i_chart_const
+#'
+#' This function returns 3/d2(n).
+#'
+#' @param n Number of samples in the current batch
+#' @return Numeric constant
+#'
+i_chart_const <- function(n)
+{
+    return( 3 / d2_(n) )
 }

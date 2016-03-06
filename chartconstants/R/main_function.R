@@ -16,7 +16,7 @@
 #' constant(2,'d2')
 #' constant(2:10, D4)
 #'
-constant <- function(n, cname = c('','A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4'))
+constant <- function(n, cname = c('','A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4','i_chart_const','one'))
 {
     check_n(n)
 
@@ -37,7 +37,9 @@ constant <- function(n, cname = c('','A2','A3','B3','B4','B5','B6','c4','d2','d3
            D1 = D1(n),
            D2 = D2(n),
            D3 = D3_(n),
-           D4 = D4(n))
+           D4 = D4(n),
+           i_chart_const = i_chart_const(n),
+           one = one(n))
 }
 
 # ################################################################################

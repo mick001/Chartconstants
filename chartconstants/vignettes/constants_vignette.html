@@ -11,7 +11,7 @@
 
 <meta name="author" content="Michy Alice" />
 
-<meta name="date" content="2016-02-29" />
+<meta name="date" content="2016-03-06" />
 
 <title>How to calculate constants using the chartconstants package</title>
 
@@ -52,7 +52,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 <h1 class="title">How to calculate constants using the chartconstants package</h1>
 <h4 class="author"><em>Michy Alice</em></h4>
-<h4 class="date"><em>2016-02-29</em></h4>
+<h4 class="date"><em>2016-03-06</em></h4>
 
 </div>
 
@@ -64,7 +64,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>The main function <em>constant()</em> takes two arguments in the following order:</p>
 <ol style="list-style-type: decimal">
 <li><em>n</em>: Numerosity of the sample. This argument should be an integer between 2 and 25 included. If n is outside the above mentioned range or is not an integer, the function call will result in an error. Note that <em>n</em> can also be an vector of integers.</li>
-<li><em>cname</em>: Name of the constant to be used. This argument can be a character, even though non standard evaluation is implemented. For instance, d2, “d2” or ‘d2’ are all valid parameters. Available constants are the following: A2, A3, B3, B4, B5, B6, c4, d2, d3, D1, D2, D3 and D4. In case no <em>cname</em> argument is specified, the function will stop the calculation and throw an error. Please note that the function is case sensitive, i.e. ‘d3’ is different than ‘D3’</li>
+<li><em>cname</em>: Name of the constant to be used. This argument can be a character, even though non standard evaluation is implemented. For instance, d2, “d2” or ‘d2’ are all valid parameters. Available constants are the following: A2, A3, B3, B4, B5, B6, c4, d2, d3, D1, D2, D3, D4 and i_chart_const. In case no <em>cname</em> argument is specified, the function will stop the calculation and throw an error. Please note that the function is case sensitive, i.e. ‘d3’ is different than ‘D3’</li>
 </ol>
 <p>Examples:</p>
 <p>The following are all valid examples of usage:</p>
@@ -83,7 +83,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <pre><code>## Error in match.arg(cname): 'arg' must be of length 1</code></pre>
 <p>In case the <em>cname</em> parameter is not within the set of available constants, the function throws an error</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">constant</span>(<span class="dv">2</span>, d222)</code></pre>
-<pre><code>## Error in match.arg(cname): 'arg' should be one of &quot;&quot;, &quot;A2&quot;, &quot;A3&quot;, &quot;B3&quot;, &quot;B4&quot;, &quot;B5&quot;, &quot;B6&quot;, &quot;c4&quot;, &quot;d2&quot;, &quot;d3&quot;, &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;</code></pre>
+<pre><code>## Error in match.arg(cname): 'arg' should be one of &quot;&quot;, &quot;A2&quot;, &quot;A3&quot;, &quot;B3&quot;, &quot;B4&quot;, &quot;B5&quot;, &quot;B6&quot;, &quot;c4&quot;, &quot;d2&quot;, &quot;d3&quot;, &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;, &quot;D4&quot;, &quot;i_chart_const&quot;, &quot;one&quot;</code></pre>
 <p>In case the <em>n</em> parameter is a vector of integers <span class="math">\((n_1, n_2, ...)\)</span> the function returns the constants as a vector as follows <span class="math">\((D_3(n_1), D_3(n_2), ...)\)</span>, see the example below:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">constant</span>(<span class="kw">c</span>(<span class="dv">4</span>:<span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">15</span>), D3)</code></pre>
 <pre><code>## [1] 0.000 0.000 0.000 0.076 0.223 0.347</code></pre>
@@ -108,7 +108,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><em>available_constants()</em> prints out a string with all the available constants to be calculated. For instance:</li>
 </ol>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">available_constants</span>()</code></pre>
-<pre><code>## Available constants: A2 A3 B3 B4 B5 B6 c4 d2 d3 D1 D2 D3 D4</code></pre>
+<pre><code>## Available constants: A A2 A3 B3 B4 B5 B6 c4 d2 d3 D1 D2 D3 D4 i_chart_const one</code></pre>
 </div>
 
 

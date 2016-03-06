@@ -5,7 +5,7 @@
 \title{Constants for Shewhart quality control charts}
 \usage{
 constant(n, cname = c("", "A2", "A3", "B3", "B4", "B5", "B6", "c4", "d2",
-  "d3", "D1", "D2", "D3", "D4"))
+  "d3", "D1", "D2", "D3", "D4", "i_chart_const", "one"))
 }
 \arguments{
 \item{n}{Numerosity of sample, must be an integer (numeric) within the [2,25] range.}
