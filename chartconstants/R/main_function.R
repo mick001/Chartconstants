@@ -16,7 +16,7 @@
 #' constant(2,'d2')
 #' constant(2:10, D4)
 #'
-constant <- function(n, cname = c('','A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4','i_chart_const','one'))
+constant <- function(n, cname = c('','A','A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4','i_chart_const','one'))
 {
     check_n(n)
 
@@ -25,6 +25,7 @@ constant <- function(n, cname = c('','A2','A3','B3','B4','B5','B6','c4','d2','d3
     cname <- match.arg(cname)
 
     switch(cname,
+           A = A(n),
            A2 = A2(n),
            A3 = A3(n),
            B3 = B3(n),

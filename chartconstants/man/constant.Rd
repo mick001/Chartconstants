@@ -4,7 +4,7 @@
 \alias{constant}
 \title{Constants for Shewhart quality control charts}
 \usage{
-constant(n, cname = c("", "A2", "A3", "B3", "B4", "B5", "B6", "c4", "d2",
+constant(n, cname = c("", "A", "A2", "A3", "B3", "B4", "B5", "B6", "c4", "d2",
   "d3", "D1", "D2", "D3", "D4", "i_chart_const", "one"))
 }
 \arguments{
