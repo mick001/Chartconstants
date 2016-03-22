@@ -11,7 +11,7 @@
 
 f1 <- function(n)
 {
-    f <- function(z){1-(1-pnorm(z))^n-pnorm(z)^n}
+    f <- function(z){1 - (1 - pnorm(z))^n - pnorm(z)^n}
     return(f)
 }
 

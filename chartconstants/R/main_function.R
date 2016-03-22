@@ -18,6 +18,8 @@
 #'
 constant <- function(n, cname = c('','A','A2','A3','B3','B4','B5','B6','c4','d2','d3','D1','D2','D3','D4','i_chart_const','one'))
 {
+    if(cname == "one"){ return(1) }
+
     check_n(n)
 
     cname <- as.character(substitute(cname))
@@ -39,8 +41,7 @@ constant <- function(n, cname = c('','A','A2','A3','B3','B4','B5','B6','c4','d2'
            D2 = D2(n),
            D3 = D3_(n),
            D4 = D4(n),
-           i_chart_const = i_chart_const(n),
-           one = one(n))
+           i_chart_const = i_chart_const(n))
 }
 
 # ################################################################################

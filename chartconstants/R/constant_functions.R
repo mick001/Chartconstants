@@ -223,17 +223,17 @@ D4 <- function(n)
 #-------------------------------------------------------------------------------
 # One
 ################################################################################
-#' One
-#'
-#' This function simply returns 1 or a vector of length n with all values set to 1.
-#'
-#' @param n Number of samples in the current batch
-#' @return Numeric constant
-#'
-one <- function(n)
-{
-    return( rep(1, length(n)) )
-}
+# #' One
+# #'
+# #' This function simply returns 1 or a vector of length n with all values set to 1.
+# #'
+# #' @param n Number of samples in the current batch
+# #' @return Numeric constant
+# #'
+# one <- function(n)
+# {
+#     return( rep(1, length(n)) )
+# }
 
 #-------------------------------------------------------------------------------
 # Numeric constant for LCL and UCL calculation in the I chart
